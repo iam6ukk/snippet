@@ -68,19 +68,19 @@ export async function handler(event, context) {
       body: JSON.stringify({
         parent: { database_id: DATABASE_ID },
         properties: {
-          title: {
+          제목: {
             title: [{ text: { content: title } }],
           },
-          skill: {
+          스킬: {
             select: { name: skill },
           },
-          summary: {
+          요약: {
             rich_text: [{ text: { content: summary } }],
           },
-          tags: {
+          태그: {
             multi_select: tags.map(tag => ({ name: tag })),
           },
-          date: {
+          생성일: {
             date: { start: today },
           },
         },
